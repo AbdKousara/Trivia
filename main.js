@@ -25,9 +25,9 @@ document.querySelector(".btn_start").addEventListener('click',function(){
 
 });
 
-var numberOfBouttons = document.querySelectorAll(".topic_btn").length;
-for (var i = 0; i < numberOfBouttons;i++) {
-    document.querySelectorAll(".topic_btn")[i].addEventListener("click", function(){
+var numberOfBouttons = document.querySelectorAll(".topic_btn");
+for (var i = 0; i < numberOfBouttons.length;i++) {
+       numberOfBouttons[i].addEventListener("click", function(){
         var buttoninnerHTML = this.innerHTML;
         quizzes.forEach(function(element){
               if(element.name === buttoninnerHTML){
